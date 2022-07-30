@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>My Socle Function Module</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZISU_MYSOCLE_BPTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZISU_MYSOCLE_BP</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZISU_MYSOCLE_CREATE_BP</FUNCNAME>
+     <SHORT_TEXT>Create a business Partnar</SHORT_TEXT>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

@@ -1,0 +1,27 @@
+managed implementation in class zbp_risu_su_flux_log unique;
+//strict; //Comment this line in to enable strict mode. The strict mode is prerequisite to be future proof regarding syntax and to be able to release your BO.
+
+define behavior for ZRISU_SU_FLUX_LOG //alias <alias_name>
+persistent table ZISU_SU_FLUX_LOG
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  static function synchronise_bp  parameter ZRISU_SU_FLUX_LOG_1 result [1] ZRISU_SU_FLUX_LOG_2;
+  static function execute_ordonnoncement result [1] ZRISU_SU_FLUX_LOG_2;
+  static function create_entries result [1] $self;
+  static function get_bp_ko parameter ZRISU_SU_FLUX_CHECK_BP  result [1] ZRISU_SU_FLUX_LOG_2;
+  static function get_bp_PrisenCompte parameter ZRISU_SU_FLUX_CHECK_BP  result [1] ZRISU_SU_FLUX_LOG_2;
+  static function get_flux_ordo parameter ZRISU_SU_FLUX_CHECK_BP  result [1] ZRISU_SU_FLUX_LOG_2;
+  static function execute_bp_ordo parameter ZRISU_SU_FLUX_CHECK_BP    result [1] ZRISU_SU_FLUX_LOG_2;
+  static function execute_other_bp     result [0..*] $self;
+  static function execute_cs_ordo parameter ZRISU_SU_FLUX_CHECK_CS    result [1] ZRISU_SU_FLUX_LOG_2;
+  static function set_flux_cs parameter ZRISU_SU_FLUX_CHECK_BP  result [1] $self;
+  static function check_cs_info parameter ZRISU_SU_FLUX_CHECK_CS  result [1] $self;
+  static function handle_cs_crea_function  parameter ZRISU_SU_FLUX_CHECK_CS    result [1] ZRISU_SU_FLUX_LOG_2;
+  static function check_cs_bp  parameter ZRISU_SU_FLUX_CHECK_CS result [1] ZAISU_GET_BP_Details;
+  static function check_cs_to  parameter ZRISU_SU_FLUX_CHECK_CS result [1] ZRISU_SU_FLUX_CHECK_TO;
+  delete;
+}

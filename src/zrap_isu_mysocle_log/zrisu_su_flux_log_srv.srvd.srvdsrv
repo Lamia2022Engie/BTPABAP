@@ -1,0 +1,4 @@
+@EndUserText.label: 'ZRISU_SU_FLUX_LOG_SRV'
+define service ZRISU_SU_FLUX_LOG_SRV {
+  expose ZRISU_SU_FLUX_LOG;
+}

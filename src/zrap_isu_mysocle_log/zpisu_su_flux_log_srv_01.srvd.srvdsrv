@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service definition on ZPISU_SU_FLUX_LOG projection view'
+define service ZPISU_SU_FLUX_LOG_SRV_01 {
+  expose ZPISU_SU_FLUX_LOG as iflows;
+}

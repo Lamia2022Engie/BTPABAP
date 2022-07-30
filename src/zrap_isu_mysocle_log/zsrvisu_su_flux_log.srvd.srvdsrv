@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service definition on iFlow log table'
+define service ZSRVISU_SU_FLUX_LOG {
+  expose ZRISU_SU_FLUX_LOG as iflows;
+}

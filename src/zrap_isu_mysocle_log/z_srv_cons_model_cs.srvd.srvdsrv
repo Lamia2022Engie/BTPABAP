@@ -1,0 +1,5 @@
+@EndUserText.label: 'Z_SRV_CONS_MODEL_CS'
+@OData.schema.name: 'cds_zsrvisu_su_flux_log'
+define service Z_SRV_CONS_MODEL_CS {
+ expose ZIFLOWS; 
+ } 
